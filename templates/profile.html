@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            
+     
+        }
+        .hi {
+            border:2px solid #fff;
+            padding: 3%;
+            border:none;
+          
+        }
+        .col-mg-4 {
+            /* width: calc(33.33% - 20px); */
+            margin-bottom: 20px;
+        }
+        .profile {
+            padding: 10px;
+            border:none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 3px 2px grey;
+        }
+        .profile label {
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('home') }}" class="button">Go to Home</a>
+        <a href="{{ url_for('uradpotion') }}" class="button">U r Adoptions</a>
+        {% if profiles %}
+        <a href="{{ url_for('ursearches', id=profiles[0][5]) }}" class="button">U r Searches</a>
+        {% endif %}
+    </div>
+ 
+</body>
+</html>
